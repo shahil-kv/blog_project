@@ -1,0 +1,41 @@
+<nav>
+  <div class="flex items-center justify-between gap-4">
+    <a class="" href=""> <img src="../../../assets/navLogo.svg" alt="" /></a>
+    <a *ngIf="isOpen" else imgOpen class="" href=""
+      ><img src="../../../assets/close.svg" alt="" />
+      <ng-template #imgOpen>
+        <img src="../../../assets/NavhireMe.svg" alt="" />
+      </ng-template>
+    </a>
+
+    <span class="flex-1"></span>
+    <button (click)="isTrue()">
+      <span class="text-4xl material-symbols-outlined"> menu </span>
+    </button>
+  </div>
+</nav>
+
+<!-- Slide open through -->
+<div
+  *ngIf="isOpen"
+  class="flex flex-col justify-center gap-8 no-underline mt-12 pl-10 font-monsterrat font-medium list-none"
+>
+  <li class="transition-all -translate-x-50 duration">
+    <a href="">Portfolio</a>
+  </li>
+  <li>
+    <a href="">Blog</a>
+  </li>
+  <li>
+    <a href="">Cv</a>
+  </li>
+  <li>
+    <a href="">Story</a>
+  </li>
+  <li>
+    <a href="">Freelance</a>
+  </li>
+  <li>
+    <a href="">About Me</a>
+  </li>
+</div>
