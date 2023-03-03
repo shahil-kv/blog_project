@@ -11,6 +11,7 @@ import { SinglePostComponent } from './pages/single-post/single-post.component';
 import { TermsAndConditionComponent } from './pages/terms-and-condition/terms-and-condition.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { SubscriptionFormComponent } from './subscription-form/subscription-form.component';
+import { CommentFormComponent } from './comments/comment-form/comment-form.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SubscriptionFormComponent } from './subscription-form/subscription-form
     SinglePostComponent,
     TermsAndConditionComponent,
     ContactUsComponent,
-    SubscriptionFormComponent
+    SubscriptionFormComponent,
+    CommentFormComponent
   ],
   imports: [
     BrowserModule,
