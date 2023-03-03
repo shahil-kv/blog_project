@@ -10,6 +10,7 @@ import { SingleCategoryComponent } from './pages/single-category/single-category
 import { SinglePostComponent } from './pages/single-post/single-post.component';
 import { TermsAndConditionComponent } from './pages/terms-and-condition/terms-and-condition.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
+import { SubscriptionFormComponent } from './subscription-form/subscription-form.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ContactUsComponent } from './pages/contact-us/contact-us.component';
     SingleCategoryComponent,
     SinglePostComponent,
     TermsAndConditionComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    SubscriptionFormComponent
   ],
   imports: [
     BrowserModule,
