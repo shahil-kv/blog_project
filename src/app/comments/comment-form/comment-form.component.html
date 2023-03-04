@@ -1,1 +1,32 @@
-<p>comment-form works!</p>
+<div class="flex flex-col gap-5 p-12 bg-slate-100 shadow-md">
+  <div class="flex gap-3 flex-col">
+    <h1 class="text-2xl font-semibold text-primary-color">Leave a Comment</h1>
+    <p class="text-sm">Feel free to submit your review</p>
+  </div>
+  <form class="list-none flex flex-col gap-5">
+    <div class="flex flex-col gap-5">
+      <li>Name</li>
+      <input
+        type="text"
+        class="p-4 max-w-[41.875rem] rounded-sm border border-secondary-color outline-none"
+        placeholder="Enter your name"
+      />
+    </div>
+    <div class="flex flex-col gap-5">
+      <li>Comment</li>
+      <input
+        type="text"
+        class="p-4 max-w-[41.875rem] rounded-sm border border-secondary-color outline-none"
+        placeholder="Enter your name"
+      />
+      <!-- <input
+        class="border border-secondary-color py-24 p-4"
+        type="text"
+        placeholder="Leave your review"
+      /> -->
+    </div>
+  </form>
+  <button class="p-2 rounded-sm text-white max-w-[10.5rem] bg-primary-color">
+    Add comments
+  </button>
+</div>
