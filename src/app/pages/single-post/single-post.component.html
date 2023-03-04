@@ -1,5 +1,9 @@
 <div class="flex flex-col gap-12 mb-10">
-  <img src="../../../assets/boxImage.jpg" alt="" />
+  <img
+    class="max-w-[80.25rem] max-h-[31.75rem] object-cover"
+    src="../../../assets/boxImage.jpg"
+    alt=""
+  />
   <div class="list-none flex flex-row gap-3 text-xs font-normal">
     <li class="text-primary-color">Design</li>
     <li class="text-violet-400">Featured</li>
@@ -44,11 +48,11 @@
       </div>
       <div class="hidden sm:block sm:-mt-10">
         <app-post-card></app-post-card>
-        <app-post-card></app-post-card>
-        <app-post-card></app-post-card>
       </div>
     </div>
   </div>
-  <app-comment-form></app-comment-form>
-  <app-comment-list></app-comment-list>
+  <div>
+    <app-comment-form></app-comment-form>
+    <app-comment-list></app-comment-list>
+  </div>
 </div>
