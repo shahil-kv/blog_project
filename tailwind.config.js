@@ -10,7 +10,7 @@ module.exports = {
         'secondary-color': '#424242',
         'territory-color': '#3A0CA3',
         'twitter-color-btn': '#47acdf',
-        'linkedin-color-btn': '#a2bdcd',
+        'linkedin-color-btn': '#1275b1',
       },
       fontFamily: {
         'monsterrat': ['Montserrat', ' sans-serif']
