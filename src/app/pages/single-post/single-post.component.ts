@@ -10,13 +10,22 @@ import { PostsService } from 'src/app/services/posts.service';
 export class SinglePostComponent implements OnInit {
 
   postArray: any
+  similarPostArray: any
   constructor(private router: ActivatedRoute, private postService: PostsService) { }
 
   ngOnInit(): void {
     this.router.params.subscribe((value) => {
       this.postService.loadOnePost(value.id).subscribe((value) => {
         this.postArray = value
+        this.loadSimilarPost(this.postArray.category.categoryId)
       })
+    })
+  }
+
+  loadSimilarPost(catId: string) {
+    this.postService.loadSimilar(catId).subscribe((val) => {
+      this.similarPostArray = val
+      console.log(this.similarPostArray)
     })
   }
 

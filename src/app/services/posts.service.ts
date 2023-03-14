@@ -48,4 +48,16 @@ export class PostsService {
   loadOnePost(postId: string) {
     return this.afs.doc(`posts/${postId}`).valueChanges();
   }
+
+  loadSimilar(catId: string) {
+    return this.afs.collection('posts', ref => ref.where('category.categoryId', '==', catId).limit(2)).snapshotChanges().pipe(
+      map(actions => {
+        return actions.map(a => {
+          const data = a.payload.doc.data()
+          const id = a.payload.doc.id
+          return { id, data }
+        })
+      })
+    )
+  }
 }
