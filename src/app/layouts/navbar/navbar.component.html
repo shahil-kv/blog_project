@@ -1,6 +1,6 @@
 <nav>
   <div class="flex items-center justify-between gap-4 mb-20">
-    <a class="" href=""> <img src="../../../assets/navLogo.svg" alt="" /></a>
+    <a class="" routerLink="/"> <img src="../../../assets/navLogo.svg" alt="" /></a>
     <a *ngIf="isOpen" else imgOpen class="" href=""
       ><img src="../../../assets/close.svg" alt="" />
       <ng-template #imgOpen>
@@ -18,7 +18,7 @@
 <!-- Slide open through -->
 <div
   *ngIf="isOpen"
-  class="flex flex-col justify-center gap-8 no-underline mt-12 pl-10 font-monsterrat font-medium list-none"
+  class="flex flex-col justify-center gap-8 pl-10 mt-12 font-medium no-underline list-none font-monsterrat"
 >
   <li class="transition-all -translate-x-50 duration">
     <a href="">Portfolio</a>
