@@ -10,8 +10,8 @@ import { TermsAndConditionComponent } from './pages/terms-and-condition/terms-an
 // Adding routing into components
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'category', component: SingleCategoryComponent },
-  { path: 'post', component: SinglePostComponent },
+  { path: 'category/:id', component: SingleCategoryComponent },
+  { path: 'post/:id', component: SinglePostComponent },
   { path: 'term-condition', component: TermsAndConditionComponent },
   { path: 'contact', component: ContactUsComponent },
   { path: 'about', component: AboutUsComponent }

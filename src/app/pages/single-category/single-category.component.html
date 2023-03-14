@@ -1,19 +1,16 @@
 <div class="mt-20 mb-20">
-  <h1 class="mb-5 font-semibold text-2xl text-secondary-color">
-    General <span class="text-primary-color">Knowledge</span>
+  <h1 class="mb-5 text-2xl font-semibold text-secondary-color">
+    {{ title }} <span class="text-primary-color"></span>
   </h1>
-  <p class="">
+  <p class="mb-5">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita illum
     repellat, voluptatum
   </p>
   <div
-    class="flex flex-row flex-wrap md:gap-10 justify-center md:justify-start"
+    class="flex flex-row flex-wrap justify-center md:gap-10 md:justify-start"
   >
-    <app-post-card></app-post-card>
-    <app-post-card></app-post-card>
-    <app-post-card></app-post-card>
-    <app-post-card></app-post-card>
-    <app-post-card></app-post-card>
-    <app-post-card></app-post-card>
+    <div *ngFor="let singleCategory of postArray">
+      <app-post-card [PostData]="singleCategory"></app-post-card>
+    </div>
   </div>
 </div>

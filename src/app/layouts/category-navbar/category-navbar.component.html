@@ -8,9 +8,11 @@
       class="flex flex-row h-8 gap-10 pb-5"
       *ngFor="let category of categoryArray"
     >
-      <a class="text-sm sm:text-base scroll min-w-[10rem] md:min-w-0" href="">
-        <h2>{{ category.data.category }}</h2></a
-      >
+      <div class="text-sm sm:text-base scroll min-w-[10rem] md:min-w-0" href="">
+        <h2 [routerLink]="['category', category.id]">
+          {{ category.data.category }}
+        </h2>
+      </div>
     </div>
   </div>
   <div

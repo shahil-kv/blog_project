@@ -16,8 +16,11 @@ export class PostCardComponent implements OnInit {
   postCreatedAt!: any
   postCategory!: string
   time!: any
+  postId!: string
   ngOnInit(): void {
     if (this.PostData) {
+      this.postId = this.PostData.id
+      console.log(this.postId)
       this.postImg = this.PostData.data.postImgPath
       this.postCategory = this.PostData.data.category.category
       this.postViews = this.PostData.data.view
@@ -25,9 +28,8 @@ export class PostCardComponent implements OnInit {
       this.postExcerpt = this.PostData.data.excerpt
       this.postCreatedAt = this.PostData.data.createdAt
       this.time = this.toDateTime(this.postCreatedAt)
-      console.log(this.time)
     } else {
-      console.log('No data is there')
+
     }
 
   }
