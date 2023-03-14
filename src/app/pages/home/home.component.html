@@ -1,15 +1,14 @@
 <app-hero-section></app-hero-section>
-<div class="mt-20 flex flex-col justify-center">
-  <h1 class="text-2xl font-bold text-primary-color">
+<div class="flex flex-col justify-center mt-20">
+  <h1 class="mb-10 text-2xl font-bold text-primary-color">
     Featured <span class="text-secondary-color">Blogs</span>
   </h1>
   <div
-    class="flex flex-wrap flex-row md:flex-row md:gap-12 justify-center md:justify-start"
+    class="flex flex-row flex-wrap justify-center md:flex-row md:gap-12 md:justify-start"
   >
-    <app-post-card></app-post-card>
-    <app-post-card></app-post-card>
-    <app-post-card></app-post-card>
-    <app-post-card></app-post-card>
+    <div *ngFor="let featruePost of featurePostArray">
+      <app-post-card [PostData]="featruePost"></app-post-card>
+    </div>
   </div>
   <app-category-navbar></app-category-navbar>
 </div>

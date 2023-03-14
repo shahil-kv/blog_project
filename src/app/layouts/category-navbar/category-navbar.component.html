@@ -1,24 +1,23 @@
-<div class="flex flex-col gap-7 justify-center">
-  <h2 class="text-2xl mb-8 font-semibold">
-    Subscription <span class="text-primary-color">Form</span>
+<div class="flex flex-col justify-center mt-16 md:mt-32">
+  <h2 class="text-2xl font-semibold">
+    Other <span class="text-primary-color">Blogs</span>
   </h2>
-
-  <div class="flex flex-row overflow-x- gap-10 h-8 pb-14 overflow-y-auto">
+  <div class="flex flex-row mt-5 mb-10 overflow-auto md:gap-5 scroll-mx-28">
     <a href="#" class="hover:border-b-8"><h1>All</h1> </a>
-    <a href=""> <h2>UI</h2></a>
-    <a href=""> <h2>UX</h2></a>
-    <a href=""> <h2>Product</h2> </a>
-    <a href=""> <h2>Product</h2> </a>
-    <a href=""> <h2>Product</h2> </a>
-    <a href=""> <h2>Product</h2> </a>
+    <div
+      class="flex flex-row h-8 gap-10 pb-5"
+      *ngFor="let category of categoryArray"
+    >
+      <a class="text-sm sm:text-base scroll min-w-[10rem] md:min-w-0" href="">
+        <h2>{{ category.data.category }}</h2></a
+      >
+    </div>
   </div>
   <div
-    class="flex flex-wrap flex-row md:flex-row md:gap-12 justify-center md:justify-start"
+    class="flex flex-row flex-wrap justify-center md:flex-row md:gap-12 md:justify-start"
   >
-    <app-post-card></app-post-card>
-    <app-post-card></app-post-card>
-    <app-post-card></app-post-card>
-    <app-post-card></app-post-card>
-    <app-post-card></app-post-card>
+    <div *ngFor="let post of postArray">
+      <app-post-card [PostData]="post"></app-post-card>
+    </div>
   </div>
 </div>

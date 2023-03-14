@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PostsService } from 'src/app/services/posts.service';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  featurePostArray: any
+
+  constructor(private postService: PostsService) {
+    this.postService.loadFeature().subscribe(val => {
+      this.featurePostArray = val;
+    })
+  }
 
 }

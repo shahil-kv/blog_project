@@ -1,20 +1,23 @@
-<div class="mt-10 max-w-[20rem] min-w-[16.875rem] mb-12 max-h-[30.75rem]">
+<div class="mb-20 max-w-[20rem] min-w-[16.875rem] max-h-[30.75rem]">
   <div>
-    <img src="../../../assets/boxImage.jpg " alt="" />
+    <img
+      class="rounded-lg min-h-[10rem] max-h-[25rem]"
+      src="{{ postImg }} "
+      alt=""
+    />
   </div>
   <div class="py-3">
-    <div class="flex gap-6 list-none text-xs font-thin">
-      <li>INSPIRING</li>
+    <div class="flex gap-6 text-xs font-thin list-none">
+      <li>{{ postCategory }}</li>
       <li>FEATURED</li>
-      <li>VIEWS-13,212</li>
+      <li>{{ postViews }}</li>
     </div>
-    <h1 class="mt-5 mb-2 text-primary-color font-semibold">
-      This way is wrong about UI Design.
+    <h1 class="mt-5 mb-2 font-semibold text-primary-color">
+      {{ postTitle }}
     </h1>
     <p class="mb-5 text-sm">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel voluptatum
-      suscipit commodi inventore deserunt rerum, fugiat dignissimos eveniet? Et
+      {{ postExcerpt }}
     </p>
-    <p class="text-xs font-thin">LAST UPDATED-SEP 20,2020</p>
+    <p class="text-xs font-thin">{{ time }}</p>
   </div>
 </div>
