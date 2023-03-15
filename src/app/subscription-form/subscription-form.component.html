@@ -1,18 +1,50 @@
-<div class="px-2 mt-20">
-  <h2 class="mb-8 text-2xl font-semibold text-center">
-    Subscription <span class="text-primary-color">Form</span>
-  </h2>
-  <div class="flex flex-col justify-center gap-5 md:flex-row">
-    <input
-      class="border border-black px-4 py-2 drop-shadow-xl lg:min-w-[25rem]"
-      placeholder="Enter name"
-      type="text"
-    />
-    <input
-      class="border border-black px-4 py-2 drop-shadow-xl lg:min-w-[25rem]"
-      placeholder="Enter Email"
-      type="email"
-    />
-    <button class="py-2 text-white bg-primary-color px-7">Submit</button>
-  </div>
+<div class="p-3 m-3 text-green-400" *ngIf="isSubscribed">
+  👍 Thank you for subscribing our newsletter service
 </div>
+<form #subForm="ngForm" (ngSubmit)="onSubmit(subForm)" *ngIf="!isSubscribed">
+  <div class="px-2 mt-20">
+    <h2 class="mb-8 text-2xl font-semibold text-center">
+      Subscription <span class="text-primary-color">Form</span>
+    </h2>
+    <div class="p-3 m-3 text-red-400" *ngIf="isEmailError">
+      Email is already in use
+    </div>
+
+    <div class="flex flex-col justify-center gap-5 md:flex-row">
+      <input
+        name="name"
+        ngModel
+        class="border border-black px-4 py-2 drop-shadow-xl lg:min-w-[25rem]"
+        placeholder="Enter name"
+        type="text"
+        required
+        #Name="ngModel"
+      />
+      <div class="text-red-400" *ngIf="Name.touched && Name.invalid">
+        <div *ngIf="Name.errors">Name is Required</div>
+      </div>
+      <input
+        name="email"
+        ngModel
+        class="border border-black px-4 py-2 drop-shadow-xl lg:min-w-[25rem]"
+        placeholder="Enter Email"
+        type="email"
+        required
+        email
+        #Email="ngModel"
+      />
+      <div class="text-red-400" *ngIf="Email.touched && Email.invalid">
+        <div *ngIf="Email.errors">Email is Required</div>
+        <div *ngIf="Email.errors?.email">
+          Please Enter a Valid Email Address
+        </div>
+      </div>
+      <button
+        [disabled]="subForm.invalid"
+        class="py-2 text-white bg-primary-color px-7"
+      >
+        Submit
+      </button>
+    </div>
+  </div>
+</form>

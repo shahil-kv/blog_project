@@ -19,7 +19,6 @@ export class PostCardComponent implements OnInit {
   postId!: string
   ngOnInit(): void {
     if (this.PostData) {
-
       this.postId = this.PostData.id
       this.postImg = this.PostData.data.postImgPath
       this.postCategory = this.PostData.data.category.category
