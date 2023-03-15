@@ -1,6 +1,7 @@
 <nav>
-  <div class="flex items-center justify-between gap-4 mb-20">
-    <a class="" routerLink="/"> <img src="../../../assets/navLogo.svg" alt="" /></a>
+  <div class="relative flex items-center justify-between gap-4 mb-20">
+    <a class="" href=""> <img src="../../../assets/navLogo.svg" alt="" /></a>
+
     <a *ngIf="isOpen" else imgOpen class="" href=""
       ><img src="../../../assets/close.svg" alt="" />
       <ng-template #imgOpen>
@@ -9,33 +10,59 @@
     </a>
 
     <span class="flex-1"></span>
-    <button (click)="isTrue()">
+
+    <div
+      class="flex-row justify-center hidden gap-8 font-medium no-underline list-none lg:flex font-monsterrat"
+    >
+      <li class="transition-all -translate-x-50 duration">
+        <a href="">Portfolio</a>
+      </li>
+      <li>
+        <a href="">Blog</a>
+      </li>
+      <li>
+        <a href="">Cv</a>
+      </li>
+      <li>
+        <a href="">Story</a>
+      </li>
+      <li>
+        <a href="">Freelance</a>
+      </li>
+      <li>
+        <a href="">About Me</a>
+      </li>
+    </div>
+
+    <div class="flex items-center gap-10" *ngIf="isOpen"></div>
+
+    <button class="block lg:hidden" (click)="isTrue()">
       <span class="text-4xl material-symbols-outlined"> menu </span>
     </button>
+
+    <!-- Slide open through -->
+    <div
+      *ngIf="isOpen"
+      class="absolute flex flex-col w-[20rem] h-[85vh] gap-12 p-10 mt-12 -ml-6 font-medium no-underline list-none bg-red-300 text-white top-5 font-monsterrat rounded-l-none rounded-lg"
+    >
+      <li>
+        <a href="">Portfolio</a>
+      </li>
+      <li>
+        <a href="">Blog</a>
+      </li>
+      <li>
+        <a href="">Cv</a>
+      </li>
+      <li>
+        <a href="">Story</a>
+      </li>
+      <li>
+        <a href="">Freelance</a>
+      </li>
+      <li>
+        <a href="">About Me</a>
+      </li>
+    </div>
   </div>
 </nav>
-
-<!-- Slide open through -->
-<div
-  *ngIf="isOpen"
-  class="flex flex-col justify-center gap-8 pl-10 mt-12 font-medium no-underline list-none font-monsterrat"
->
-  <li class="transition-all -translate-x-50 duration">
-    <a href="">Portfolio</a>
-  </li>
-  <li>
-    <a href="">Blog</a>
-  </li>
-  <li>
-    <a href="">Cv</a>
-  </li>
-  <li>
-    <a href="">Story</a>
-  </li>
-  <li>
-    <a href="">Freelance</a>
-  </li>
-  <li>
-    <a href="">About Me</a>
-  </li>
-</div>
