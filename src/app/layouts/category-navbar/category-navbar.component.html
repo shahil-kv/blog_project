@@ -1,15 +1,17 @@
 <div class="flex flex-col justify-center mt-16 md:mt-32">
-  <h2 class="text-2xl font-semibold">
+  <h2 class="text-3xl font-semibold">
     Other <span class="text-primary-color">Blogs</span>
   </h2>
-  <div class="flex flex-row mt-5 mb-10 overflow-auto md:gap-5 scroll-mx-28">
-    <a href="#" class="hover:border-b-8"><h1>All</h1> </a>
+  <div
+    class="flex flex-row p-5 mt-10 mb-10 overflow-auto text-center bg-red-300 rounded-lg md:gap-5 scroll-mx-28"
+  >
+    <a href="#" class="mr-4 text-white hover:border-b-8"><h1>All</h1> </a>
     <div
-      class="flex flex-row h-8 gap-10 pb-5"
+      class="flex flex-row h-5 gap-20 text-white pb-7"
       *ngFor="let category of categoryArray"
     >
-      <div class="text-sm sm:text-base scroll min-w-[10rem] md:min-w-0" href="">
-        <h2 [routerLink]="['category', category.id]">
+      <div class="text-sm sm:text-base scroll min-w-[5rem] md:min-w-0">
+        <h2 class="cursor-pointer" [routerLink]="['category', category.id]">
           {{ category.data.category }}
         </h2>
       </div>
