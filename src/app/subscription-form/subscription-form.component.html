@@ -1,4 +1,4 @@
-<div class="p-3 m-3 text-green-400" *ngIf="isSubscribed">
+<div class="p-3 m-3 text-center text-green-400" *ngIf="isSubscribed">
   👍 Thank you for subscribing our newsletter service
 </div>
 <form #subForm="ngForm" (ngSubmit)="onSubmit(subForm)" *ngIf="!isSubscribed">
