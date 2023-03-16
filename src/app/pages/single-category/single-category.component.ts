@@ -11,6 +11,7 @@ export class SingleCategoryComponent implements OnInit {
   postArray: any
   valueId: any
   title!: string
+  subTitle!: string
   constructor(
     private route: ActivatedRoute,
     private postService: PostsService
@@ -21,7 +22,7 @@ export class SingleCategoryComponent implements OnInit {
       this.valueId = value
       this.postService.loadCategoryPosts(value.id).subscribe((post) => {
         this.postArray = post
-        console.log(this.postArray)
+        this.subTitle = this.postArray[0].data.excerpt
         this.title = this.postArray[0].data.category.category
       })
     })
