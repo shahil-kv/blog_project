@@ -9,8 +9,8 @@
   <div
     class="flex flex-row flex-wrap justify-center md:gap-10 md:justify-start"
   >
-    <div>
-      <app-post-card [PostData]="postArray"></app-post-card>
+    <div *ngFor="let item of postArray">
+      <app-post-card [PostData]="item"></app-post-card>
     </div>
   </div>
 </div>

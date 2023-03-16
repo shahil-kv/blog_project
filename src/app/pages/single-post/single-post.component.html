@@ -24,8 +24,8 @@
           class="hidden sm:block sm:-mt-10"
           *ngFor="let similar of similarPostArray"
         >
-          <div>
-            <app-post-card [PostData]="similarPostArray[0]"></app-post-card>
+          <div *ngFor="let similar of similarPostArray">
+            <app-post-card [PostData]="similar"></app-post-card>
           </div>
         </div>
       </div>

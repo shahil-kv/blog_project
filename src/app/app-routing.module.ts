@@ -14,7 +14,8 @@ const routes: Routes = [
   { path: 'post/:id', component: SinglePostComponent },
   { path: 'term-condition', component: TermsAndConditionComponent },
   { path: 'contact', component: ContactUsComponent },
-  { path: 'about', component: AboutUsComponent }
+  { path: 'about', component: AboutUsComponent },
+  { path: 'contact', component: ContactUsComponent }
 ];
 
 @NgModule({
