@@ -1,11 +1,11 @@
 <div
   class="mb-12 max-w-[20rem] min-w-[16.875rem] max-h-[30.75rem] hover:scale-105"
-  [routerLink]="['post/', postId]"
+  [routerLink]="['/post/', postId]"
 >
   <div>
     <img
       class="rounded-lg min-h-[10rem] max-h-[10rem] w-80 object-cover"
-      src="{{ postImg }} "
+      [src]="postImg"
       alt=""
     />
   </div>
