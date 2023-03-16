@@ -1,24 +1,26 @@
 <div
-  class="mb-44 md:mb-32 max-w-[20rem] min-w-[16.875rem] max-h-[30.75rem]"
+  class="mb-12 max-w-[20rem] min-w-[16.875rem] max-h-[30.75rem]"
   [routerLink]="['post/', postId]"
 >
   <div>
     <img
-      class="rounded-lg min-h-[10rem] max-h-[25rem]"
+      class="rounded-lg min-h-[10rem] max-h-[10rem] w-80 object-cover"
       src="{{ postImg }} "
       alt=""
     />
   </div>
-  <div class="py-3">
+  <div
+    class="p-3 py-3 bg-slate-100 min-h-[18.5rem] max-h-[18.5rem] rounded-l-none rounded-r-lg h-auto"
+  >
     <div class="flex gap-6 text-xs font-thin list-none">
       <li>{{ postCategory }}</li>
       <li *ngIf="PostData.data.isFeatured">FEATURED</li>
       <li>{{ postViews }}</li>
     </div>
-    <h1 class="mt-5 mb-2 font-semibold text-primary-color">
+    <h1 class="mt-5 mb-2 text-2xl font-semibold text-primary-color">
       {{ postTitle }}
     </h1>
-    <p class="mb-5 text-sm">
+    <p class="mb-5 text-sm leading-6">
       {{ postExcerpt }}
     </p>
     <p class="text-xs font-thin">{{ time }}</p>

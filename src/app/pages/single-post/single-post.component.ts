@@ -26,6 +26,7 @@ export class SinglePostComponent implements OnInit {
   loadSimilarPost(catId: string) {
     this.postService.loadSimilar(catId).subscribe((val) => {
       this.similarPostArray = val
+      console.log(this.similarPostArray)
     })
   }
 
