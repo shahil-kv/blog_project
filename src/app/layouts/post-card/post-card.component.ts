@@ -26,16 +26,17 @@ export class PostCardComponent implements OnInit {
       this.postTitle = this.PostData.data.title
       this.postExcerpt = this.PostData.data.excerpt
       this.postCreatedAt = this.PostData.data.createdAt
-      this.time = this.toDateTime(this.postCreatedAt)
+      this.time = this.convertToDate(this.postCreatedAt.seconds)
     } else {
 
     }
 
   }
-  toDateTime(secs: any) {
-    var t = new Date(1970, 0, 1); // Epoch
-    t.setSeconds(secs);
-    return t;
+
+  convertToDate(timeStambs: any) {
+    const dateObj = new Date(timeStambs)
+    const year = dateObj.toLocaleDateString()
+    return { year }
   }
 
 }

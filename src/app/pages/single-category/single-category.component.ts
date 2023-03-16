@@ -21,6 +21,7 @@ export class SingleCategoryComponent implements OnInit {
       this.valueId = value
       this.postService.loadCategoryPosts(value.id).subscribe((post) => {
         this.postArray = post
+        console.log(this.postArray)
         this.title = this.postArray[0].data.category.category
       })
     })

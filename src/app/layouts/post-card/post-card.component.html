@@ -1,5 +1,5 @@
 <div
-  class="mb-12 max-w-[20rem] min-w-[16.875rem] max-h-[30.75rem]"
+  class="mb-12 max-w-[20rem] min-w-[16.875rem] max-h-[30.75rem] hover:scale-105"
   [routerLink]="['post/', postId]"
 >
   <div>
@@ -15,7 +15,6 @@
     <div class="flex gap-6 text-xs font-thin list-none">
       <li>{{ postCategory }}</li>
       <li *ngIf="PostData.data.isFeatured">FEATURED</li>
-      <li>{{ postViews }}</li>
     </div>
     <h1 class="mt-5 mb-2 text-2xl font-semibold text-primary-color">
       {{ postTitle }}
@@ -23,6 +22,6 @@
     <p class="mb-5 text-sm leading-6">
       {{ postExcerpt }}
     </p>
-    <p class="text-xs font-thin">{{ time }}</p>
+    <p class="text-xs font-thin">{{ time.year }}</p>
   </div>
 </div>
