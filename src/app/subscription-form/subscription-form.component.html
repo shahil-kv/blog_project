@@ -1,6 +1,7 @@
 <div class="p-3 m-3 text-center text-green-400" *ngIf="isSubscribed">
   👍 Thank you for subscribing our newsletter service
 </div>
+
 <form #subForm="ngForm" (ngSubmit)="onSubmit(subForm)" *ngIf="!isSubscribed">
   <div class="px-2 mt-5">
     <h2 class="mb-8 text-2xl font-semibold text-center">

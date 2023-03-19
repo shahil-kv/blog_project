@@ -1,6 +1,8 @@
 <nav>
   <div class="relative flex items-center justify-between gap-4 mb-20">
-    <a class="" href=""> <img src="../../../assets/navLogo.svg" alt="" /></a>
+    <a class="" routerLink="/">
+      <img src="../../../assets/navLogo.svg" alt=""
+    /></a>
 
     <a *ngIf="isOpen" else imgOpen class="" href=""
       ><img src="../../../assets/close.svg" alt="" />
@@ -12,20 +14,46 @@
     <span class="flex-1"></span>
 
     <div
-      class="flex-row justify-center hidden gap-8 pr-12 font-medium no-underline list-none lg:flex font-monsterrat"
+      class="flex-row items-center justify-center hidden gap-8 pr-12 font-medium no-underline list-none lg:flex font-monsterrat"
     >
       <li>
-        <a href="">Cv</a>
+        <a
+          class="relative font-medium before:absolute before:-bottom-1 before:h-0.5 before:w-full before:origin-left before:scale-x-0 before:bg-red-300 before:transition hover:before:scale-100"
+          routerLink="/"
+        >
+          Portfolio
+        </a>
       </li>
+      <a
+        class="relative font-medium before:absolute before:-bottom-1 before:h-0.5 before:w-full before:origin-left before:scale-x-0 before:bg-red-300 before:transition hover:before:scale-100"
+        routerLink="/"
+      >
+        About
+      </a>
       <li>
-        <a href="">Story</a>
+        <a
+          class="relative font-medium before:absolute before:-bottom-1 before:h-0.5 before:w-full before:origin-left before:scale-x-0 before:bg-red-300 before:transition hover:before:scale-100"
+          routerLink="/contact"
+        >
+          contact
+        </a>
       </li>
-      <li>
-        <a routerLink="/contact">About</a>
-      </li>
-      <li>
-        <a routerLink="/contact">Contact Me</a>
-      </li>
+      <a
+        class="relative inline-block px-8 py-3 overflow-hidden border border-red-300 group focus:outline-none focus:ring"
+        href="mailto: mshahilkv@gmail.com"
+      >
+        <span
+          class="absolute inset-y-0 left-0 w-[2px] bg-red-300 transition-all group-hover:w-full group-active:bg-red-300"
+        ></span>
+
+        <span
+          class="relative text-sm font-medium text-black transition-colors group-hover:text-white"
+        >
+          Hire me
+        </span>
+      </a>
+
+      <!-- Right -->
     </div>
 
     <div class="flex items-center gap-10" *ngIf="isOpen"></div>
